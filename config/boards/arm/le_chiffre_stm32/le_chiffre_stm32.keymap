@@ -76,7 +76,7 @@
             bindings = <&none>, <&to 0>;
         };
 
-        to_extra: to_colemakdh {
+        to_colemakdh: to_colemakdh {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_TO_COLEMAKDH";
             #binding-cells = <0>;
@@ -146,10 +146,8 @@ label= "BASE"                              ;
                                               &kp TAB       &lt SYM SPACE     &lt NAV RET   &lt MET BSPC
 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
 
-                        >;               
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            //sensor-bindings = <&inc_dec_kp  LEFT  RIGHT>;
+                        >;          
+    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
      };
                 colemakdh {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -171,7 +169,6 @@ label= "COLMAKDH"                              ;
                         >;               
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-            //sensor-bindings = <&inc_dec_kp  LEFT  RIGHT>;
      };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
