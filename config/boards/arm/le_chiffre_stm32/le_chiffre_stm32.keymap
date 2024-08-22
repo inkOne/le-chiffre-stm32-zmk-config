@@ -70,21 +70,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&bstab>;
         };
-
-         to_bas: to_bas {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_BAS";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
-        to_col: to_col {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TO_COL";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 1>;
-        };
-
     };
 
     cond_layers {
@@ -145,7 +130,7 @@
 
             bindings = <
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                        &kp Q        &kp W          &kp F        &kp P          &kp B              &kp J          &kp L        &kp U         &kp Y        &kp APOS
+                        &kp Q        &kp W          &kp F        &kp P          &kp B              &kp J          &kp L        &kp U         &kp Y        &kp LS(COMMA)
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &am LCTRL A   &am LGUI R    &am LALT S    &as LSHFT T   &kp G             &kp M          &as RSHFT N   &am RALT E   &am RGUI I    &am RCTRL O   
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -202,13 +187,13 @@
             label = "FUN";
             bindings = <
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    &trans        &trans        &tog 1   &tog 0        &trans         &trans           &trans        &trans       &trans        &trans        
+                    &trans        &trans          &tog 1         &trans        &trans         &trans           &trans        &trans       &trans        &trans        
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp C_PREV       &kp C_PP      &kp C_NEXT  &trans        &trans        
+                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp C_PREV       &kp C_PP      &kp C_NEXT  &trans        &trans        
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp CAPS      &kp C_BRI_DN  &kp C_BRI_UP  &trans        &bt BT_CLR     &kp C_MUTE       &kp C_VOL_DN &kp C_VOL_UP    &trans        &trans        
+                    &kp CAPS      &kp C_BRI_DN  &kp C_BRI_UP  &trans        &bt BT_CLR        &kp C_MUTE       &kp C_VOL_DN &kp C_VOL_UP    &trans        &trans        
                 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                            &kp TAB       &lt SYM SPACE     &lt NAV RET   &lt MET BSPC  
+                                                            &kp TAB       &lt SYM SPACE        &lt NAV RET   &lt MET BSPC  
                 //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
