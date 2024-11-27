@@ -25,7 +25,7 @@
          */
     };
 
-    transform: transform {
+    transform: transform_with_encoder {
         compatible = "zmk,matrix-transform";
         rows = <4>;
         columns = <10>;
