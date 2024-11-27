@@ -20,7 +20,6 @@
         zephyr,console = &cdc_acm_uart;
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform_with_encoder;
-        zmk,encoder = &encoder;
         /* TODO: Enable once we support the IC for underglow
         zmk,underglow = &led_strip;
          */
@@ -111,16 +110,15 @@
         label = "ENCODER";
         a-gpios = <&gpiob 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpiob 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	steps = <30>;
+	    steps = <30>;
         status = "okay";
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        status = "disabled";
+        status = "okay";
         sensors = <&encoder>;
-
-	triggers-per-rotation = <15>;
+	    triggers-per-rotation = <15>;
     };
 };
 
